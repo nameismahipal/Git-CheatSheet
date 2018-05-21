@@ -1,2 +1,4 @@
 # GitTest
-practicing git
+Practicing Git.
+
+

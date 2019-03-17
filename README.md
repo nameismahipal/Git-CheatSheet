@@ -1,6 +1,7 @@
 Practicing Git.
 
 https://guides.github.com/features/mastering-markdown/
+
 https://github.com/joshnh/Git-Commands
 
 # Git Tips
@@ -19,6 +20,10 @@ https://github.com/joshnh/Git-Commands
 
 > logs all commits,but also shows which files are changed.
 > q to quit log.
+
+4. git log --graph --oneline <branch-name> <branch-name>
+ 
+5. git log --graph --oneline 
 
 ## Colored Output
 
@@ -42,17 +47,41 @@ https://github.com/joshnh/Git-Commands
 
 4. git commit -m "<comment>"  or git commit => opens editor to add comment
   
+## Branch
+
+1. git branch
+> shows all the existing branches
+
+2. git branch <name>
+> creates a new branch with <name>
+ 
+3. git checkout <branch-name>
+> changes will happen on this branch
+ 
+4. git checkout -b <new-branch-name>
+> it creates new branch & checkouts that branch
+
+
 ## Different Directories
 
-Working Directory      Staging Area       Repository Commit
-
-   File 1                File 1             commit [File1, File 2]
-   File 2*               File 2
+| Working Directory | Staging Area  | Repository Commit  |
+| ----------------- |:-------------:| ------------------:|
+| File 1      | File 1 | commit[File1, File2] |
+| File 2*     | File 2 |                      |
    
-   
+  
    git diff
    > gives diff b/n *Working Directory* and *Staging Area*
    
    git diff --staged
    > gives diff b/n *Staging Area* and *Repository Area*
    
+   
+# Garbage Collector
+
+git gc
+
+#DANGER#
+
+git reset --hard
+> Removes changes in both Working directory and Staging directory

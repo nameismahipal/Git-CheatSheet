@@ -113,7 +113,11 @@ After Merge, git log shows commits of both branches lined based on timestamp.
 1. git merge --abort
 > Restore files to their state before you Started the merge.
  
- 
+## Amend
+
+git commit --amend
+> to undo the most recent commit or to change the wording of commit message.
+
 ## Delete
 
 1. git branch -d <#branch-name>
@@ -127,3 +131,111 @@ git gc
 
 git reset --hard
 > Removes changes in both Working directory and Staging directory
+
+***
+
+## When Clone
+
+|  Local copy |                          
+| ----------------- |                        
+| eb2 v1      |                            
+| -> Master     |                     
+| -> origin/master(last known pos) |  
+ 
+
+
+| Github Repository (Origin) |
+| ---------- |    
+| eb2 v1 (last known pos) |
+| -> Master |   
+
+>When clone, 
+> you get local copy of remote branch. Here it is Origin/Master ( you can have more than one remote)
+> you get local branch, same as in Origin. Here it is Master
+
+## When Commit Locally
+
+|  Local copy |                          
+| ----------------- |                        
+| eb2 v1 - origin/master(pos of remote) |
+|^|
+| f34 v1 v1  (master)    |
+ 
+
+
+| Github Repository (Origin) |
+| ---------- |    
+| eb2 v1 (Master) |   
+
+## When Push
+
+|  Local copy |                          
+| ----------------- |                        
+| eb2 v1 |
+|^|
+| f34 v1 v1  |
+| -> master branch |
+| -> origin/master of remote |
+ 
+
+Local -> PUSH master -> Repo
+
+
+| Github Repository (Origin) |
+| ---------- |    
+| eb2 v1 |
+|^|
+| f34 v1 v1  |
+| -> master branch |
+
+## Different Changes on Local and Github
+
+|  Local copy |                          
+| ----------------- |                        
+| eb2 v1 |
+|^|
+| f34 v1 v1  |
+|^|
+| a72 v2 v1  (master branch) |
+ 
+
+| Github Repository (Origin)|
+| ---------- |    
+| eb2 v1 |
+|^|
+| f34 v1 v1  |
+|^|
+| 5b3 v2 v1 (master branch) |
+
+You can update, Only the Local copy by Fetching
+
+#### git fetch Origin
+
+|  Local copy |     |                     
+| ----------------- |---|                        
+| eb2 v1 ||
+|^||
+| f34 v1 v1   | --> 5b3 v2 v1 (origin/master) |
+|^| |
+| a72 v2 v1 (master)  | |
+
+ 
+FETCH Operaion
+
+| Github Repository|
+| ---------- |    
+| eb2 v1 |
+|^|
+| f34 v1 v1  |
+|^|
+| 5b3 v2 v1  (master branch) |
+
+Local copy can be merged by, 
+
+git merge master origin/master
+
+This is same as, 
+git pull origin master
+
+== git fetch origin
+   git merge master origin/master

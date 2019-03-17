@@ -21,26 +21,26 @@ https://github.com/joshnh/Git-Commands
 > logs all commits,but also shows which files are changed.
 > q to quit log.
 
-4. git log --graph --oneline <branch-name> <branch-name>
+4. git log --graph --oneline <#branch-name> <#branch-name>
  
 5. git log --graph --oneline 
 
 6. git log -n1
 > shows only 1 commit
 
-# Remote 
+## Remote 
 
 1. git remote -v
 > shows remote origin/upstream
 
-2. git remote add origin <url>
+2. git remote add origin <#url>
 > adds remote origin to git repo
  
-# Git Push/Pull
+## Git Push/Pull
 
-1. git push origin <branch-name>
+1. git push origin <#branch-name>
 
-2. git pull origin master <branch-name-of-remote-Origin>
+2. git pull origin master <#branch-name-of-remote-Origin>
 
 ## Colored Output
 
@@ -54,28 +54,28 @@ https://github.com/joshnh/Git-Commands
 
 ## Staging Area
 
-1. git add <filename> or git add . (to add all files)
+1. git add <#filename> or git add . (to add all files)
  
-2. git reset <file name>
+2. git reset <#file name>
 > to remove file from Staging area
   
 3. git status
 > gives status about staging area
 
-4. git commit -m "<comment>"  or git commit => opens editor to add comment
+4. git commit -m "<#comment>"  or git commit => opens editor to add comment
   
 ## Branch
 
 1. git branch
 > shows all the existing branches
 
-2. git branch <name>
+2. git branch <#name>
 > creates a new branch with <name>
  
-3. git checkout <branch-name>
+3. git checkout <#branch-name>
 > changes will happen on this branch
  
-4. git checkout -b <new-branch-name>
+4. git checkout -b <#new-branch-name>
 > it creates new branch & checkouts that branch
 
 
@@ -99,12 +99,13 @@ https://github.com/joshnh/Git-Commands
 > (same as git merge branch2 if you are in branch1)
 
 2. *If you are in branch3,* 
+
    git merge branch1 branch2
 > Here, branch1, branch2 get merged to branch3.
 
 After Merge, git log shows commits of both branches lined based on timestamp.
 
-3. git show <commit>
+3. git show <#commit>
 > to see changes from its actual parent
  
 ## Merge Conflict
@@ -115,7 +116,7 @@ After Merge, git log shows commits of both branches lined based on timestamp.
  
 ## Delete
 
-1. git branch -d <branch-name>
+1. git branch -d <#branch-name>
 > this will delete only label name, but not commits, so commits accessable by commit id.
  
 ## Garbage Collector

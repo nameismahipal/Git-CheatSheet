@@ -25,6 +25,23 @@ https://github.com/joshnh/Git-Commands
  
 5. git log --graph --oneline 
 
+6. git log -n1
+> shows only 1 commit
+
+# Remote 
+
+1. git remote -v
+> shows remote origin/upstream
+
+2. git remote add origin <url>
+> adds remote origin to git repo
+ 
+# Git Push/Pull
+
+1. git push origin <branch-name>
+
+2. git pull origin master <branch-name-of-remote-Origin>
+
 ## Colored Output
 
 1. git config --global color.uri auto
@@ -76,12 +93,36 @@ https://github.com/joshnh/Git-Commands
    git diff --staged
    > gives diff b/n *Staging Area* and *Repository Area*
    
-   
-# Garbage Collector
+## Merge
+
+1. git merge branch1 branch2 
+> (same as git merge branch2 if you are in branch1)
+
+2. *If you are in branch3,* 
+   git merge branch1 branch2
+> Here, branch1, branch2 get merged to branch3.
+
+After Merge, git log shows commits of both branches lined based on timestamp.
+
+3. git show <commit>
+> to see changes from its actual parent
+ 
+## Merge Conflict
+
+1. git merge --abort
+> Restore files to their state before you Started the merge.
+ 
+ 
+## Delete
+
+1. git branch -d <branch-name>
+> this will delete only label name, but not commits, so commits accessable by commit id.
+ 
+## Garbage Collector
 
 git gc
 
-#DANGER#
+# DANGER
 
 git reset --hard
 > Removes changes in both Working directory and Staging directory

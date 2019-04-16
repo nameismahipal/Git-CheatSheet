@@ -28,6 +28,25 @@ https://github.com/joshnh/Git-Commands
 6. git log -n1
 > shows only 1 commit
 
+7. Filter by Author
+			git log --author=Mahi
+			git log --author=“Mahipal Reddy” (for spacing)
+
+8. git shortly 
+> gives details of each contributor with no. of commits he/she did, and commit messages
+
+9. git shortlog -s -n
+> displays only the total no. of commits from each user. (-n) is to sort numerically
+
+10. Filter by commit id (first 4 digits) 
+    git show <# commit-id>
+
+11.	Filter by commit message
+		 - git log --grep="unit tests" (for spacing)
+   - git log --grep=bug (or) 
+			- git log --grep bug
+< then Git will display only the commits that have the character b followed by the character u followed by g > 
+		
 ## Remote 
 
 1. git remote -v
@@ -35,6 +54,11 @@ https://github.com/joshnh/Git-Commands
 
 2. git remote add origin <#url>
 > adds remote origin to git repo
+
+3. git remote add upstream <original repository link from where we forked>
+
+4. git remote rename <“new-name”> origin
+5. git remote rename <“new-name”> upstream
  
 ## Git Push/Pull
 

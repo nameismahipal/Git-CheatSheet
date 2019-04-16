@@ -38,14 +38,13 @@ https://github.com/joshnh/Git-Commands
 9. git shortlog -s -n
 > displays only the total no. of commits from each user. (-n) is to sort numerically
 
-10. Filter by commit id (first 4 digits) 
-    git show <# commit-id>
+10. Filter by commit id (first 4 digits)
+	- git show <# commit-id>
 
-11.	Filter by commit message
-		 - git log --grep="unit tests" (for spacing)
-   - git log --grep=bug (or) 
-			- git log --grep bug
-< then Git will display only the commits that have the character b followed by the character u followed by g > 
+11. Filter by commit message
+	- git log --grep="unit tests" (for spacing)
+	- git log --grep=bug **(or)** git log --grep bug
+> then Git will display only the commits that have the character b followed by the character u followed by g. 
 		
 ## Remote 
 

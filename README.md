@@ -54,7 +54,7 @@ https://github.com/joshnh/Git-Commands
 2. git remote add origin <#url>
 > adds remote origin to git repo
 
-3. git remote add upstream <original repository link from where we forked>
+3. git remote add upstream <#original repository link from where we forked>
 
 4. git remote rename <“new-name”> origin
 5. git remote rename <“new-name”> upstream

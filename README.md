@@ -29,8 +29,8 @@ https://github.com/joshnh/Git-Commands
 > shows only 1 commit
 
 7. Filter by Author
-			git log --author=Mahi
-			git log --author=“Mahipal Reddy” (for spacing)
+	- git log --author=Mahi
+	- git log --author=“Mahipal Reddy” (for spacing)
 
 8. git shortly 
 > gives details of each contributor with no. of commits he/she did, and commit messages
